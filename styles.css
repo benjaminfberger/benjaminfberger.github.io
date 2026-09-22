@@ -1,60 +1,60 @@
 @import url('https://googleapis.com');
 body {
   font-family: 'JetBrains Mono', monospace;
-  color: #AAAAAA;
+  color: #f8f8f2;
   font-size: 16px;
-  background-color: #000000;
+  background-color: #0c0813;
 }
 * {
   box-sizing: border-box;
 }
-.text-black{
-    color: #000000;
+.text-black {
+    color: #1e1f29;
 }
-.text-red{
-    color: #AA0000;
+.text-red {
+    color: #ff5555;
 }
-.text-green{
-    color: #00AA00;
+.text-green {
+    color: #50fa7b;
 }
-.text-yellow{
-    color: #AA5500;
+.text-yellow {
+    color: #f1fa8c;
 }
-.text-blue{
-    color: #0000AA;
+.text-blue {
+    color: #bd93f9;
 }
-.text-magenta{
-    color: #AA00AA;
+.text-magenta {
+    color: #ff79c6;
 }
-.text-cyan{
-    color: #00AAAA;
+.text-cyan {
+    color: #8be9fd;
 }
-.text-white{
-    color: #AAAAAA;
+.text-white {
+    color: #f8f8f2;
 }
-.text-dark-grey{
-    color: #555555;
+.text-dark-grey {
+    color: #6272a4;
 }
-.text-bright-red{
-    color: #FF5555;
+.text-bright-red {
+    color: #ff6e6e;
 }
-.text-bright-green{
-    color: #55FF55;
+.text-bright-green {
+    color: #69ff94;
 }
-.text-bright-yellow{
-    color: #FFFF55;
+.text-bright-yellow {
+    color: #ffffa5;
 }
-.text-bright-blue{
-    color: #5555FF;
+.text-bright-blue {
+    color: #d6b4fc;
 }
-.text-bright-magenta{
-    color: #FF55FF;
+.text-bright-magenta {
+    color: #ff92df;
 }
-.text-bright-cyan{
-    color: #55FFFF;
+.text-bright-cyan {
+    color: #a4ffff;
 }
-.text-bright-white{
-    color: #FFFFFF;
+.text-bright-white {
+    color: #ffffff;
 }
 .cursor {
   margin-left: 4px;
@@ -67,10 +67,9 @@ body {
 }
 .container{
     display: flex; 
-    flex-direction: 
-    column; width: 
-    100vw; height: 
-    100vh; 
+    flex-direction: column; 
+    width: 100vw; 
+    height: 100vh; 
     box-sizing: border-box;
 }
 .name{
@@ -78,22 +77,22 @@ body {
     font-size: 2.5rem;
     display: flex; 
     flex-direction: column; 
-    height: 15%; 
+    height: auto; 
     padding: 10px; 
     box-sizing: border-box;
 }
 .pronouns{
     font-size: 1.25rem;
-    color: #AAAAAA;
     display: flex; 
     flex-direction: column; 
-    height: 30%; 
+    height: auto; 
+    padding: 10px;
     box-sizing: border-box;
     border-bottom: 1px solid #AAAAAA;
     font-weight: normal;
 }
 .nav{
-    border-bottom: 1px solid #AAAAAA;
+    border-bottom: 1px solid #555555;
     padding: 10px; 
     width: 100%; 
     height: 5%; 
@@ -120,7 +119,7 @@ body {
 .stats {
     display: flex; 
     flex-direction: column; 
-    height: 30%; 
+    height: auto; 
     padding: 10px; 
     box-sizing: border-box;
 }
@@ -141,21 +140,29 @@ body {
     display: flex; 
     flex-direction: row; 
     height: 100%;
-    width: 20%; 
+    width: 15%; 
+    padding: 10px; 
+    box-sizing: border-box;
+}
+.stats .colon {
+    display: flex; 
+    flex-direction: row; 
+    height: 100%;
+    width: 5%; 
     padding: 10px; 
     box-sizing: border-box;
 }
 .links{
     display: flex; 
     flex-direction: column; 
-    height: 25%;
+    height: auto;
     padding: 10px; 
     box-sizing: border-box;
 }
 .about{
     display: flex; 
     flex-direction: column; 
-    height: 30%; 
+    height: auto; 
     padding: 10px; 
     box-sizing: border-box;
 }
