@@ -1,0 +1,167 @@
+@import url('https://googleapis.com');
+body {
+  font-family: 'JetBrains Mono', monospace;
+  color: #AAAAAA;
+  font-size: 16px;
+  background-color: #000000;
+}
+* {
+  box-sizing: border-box;
+}
+.text-black{
+    color: #000000;
+}
+.text-red{
+    color: #AA0000;
+}
+.text-green{
+    color: #00AA00;
+}
+.text-yellow{
+    color: #AA5500;
+}
+.text-blue{
+    color: #0000AA;
+}
+.text-magenta{
+    color: #AA00AA;
+}
+.text-cyan{
+    color: #00AAAA;
+}
+.text-white{
+    color: #AAAAAA;
+}
+.text-dark-grey{
+    color: #555555;
+}
+.text-bright-red{
+    color: #FF5555;
+}
+.text-bright-green{
+    color: #55FF55;
+}
+.text-bright-yellow{
+    color: #FFFF55;
+}
+.text-bright-blue{
+    color: #5555FF;
+}
+.text-bright-magenta{
+    color: #FF55FF;
+}
+.text-bright-cyan{
+    color: #55FFFF;
+}
+.text-bright-white{
+    color: #FFFFFF;
+}
+.cursor {
+  margin-left: 4px;
+  animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.container{
+    display: flex; 
+    flex-direction: 
+    column; width: 
+    100vw; height: 
+    100vh; 
+    box-sizing: border-box;
+}
+.name{
+    font-weight: bold;
+    font-size: 2.5rem;
+    display: flex; 
+    flex-direction: column; 
+    height: 15%; 
+    padding: 10px; 
+    box-sizing: border-box;
+}
+.pronouns{
+    font-size: 1.25rem;
+    color: #AAAAAA;
+    display: flex; 
+    flex-direction: column; 
+    height: 30%; 
+    box-sizing: border-box;
+    border-bottom: 1px solid #AAAAAA;
+    font-weight: normal;
+}
+.nav{
+    border-bottom: 1px solid #AAAAAA;
+    padding: 10px; 
+    width: 100%; 
+    height: 5%; 
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex; 
+    width: 100%; 
+    height: 95%; 
+    box-sizing: border-box;
+}
+.logo{
+    padding: 10px; 
+    width: 40%; 
+    height: 100%; 
+    box-sizing: border-box;
+}
+.content{
+    padding: 10px; 
+    width: 60%; 
+    height: 100%; 
+    box-sizing: border-box;
+}
+.stats {
+    display: flex; 
+    flex-direction: column; 
+    height: 30%; 
+    padding: 10px; 
+    box-sizing: border-box;
+}
+.stats .stat {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.stats .value {
+    display: flex; 
+    flex-direction: row; 
+    height: 100%; 
+    width: 80%;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+.stats .label {
+    display: flex; 
+    flex-direction: row; 
+    height: 100%;
+    width: 20%; 
+    padding: 10px; 
+    box-sizing: border-box;
+}
+.links{
+    display: flex; 
+    flex-direction: column; 
+    height: 25%;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+.about{
+    display: flex; 
+    flex-direction: column; 
+    height: 30%; 
+    padding: 10px; 
+    box-sizing: border-box;
+}
+.footer{
+    padding: 10px; 
+    width: 100%; 
+    height: 5%; 
+    box-sizing: border-box;
+}
