@@ -1,67 +1,70 @@
 @import url('https://googleapis.com');
-body {
+body{
   font-family: 'JetBrains Mono', monospace;
-  color: #f8f8f2;
+  color: #c0caf5;
   font-size: 16px;
   background-color: #0c0813;
+}
+a{
+    color:#565f89;
 }
 * {
   box-sizing: border-box;
 }
-.text-black {
-    color: #1e1f29;
+.text-black{
+    color: #16161e;
 }
-.text-red {
-    color: #ff5555;
+.text-red{
+    color: #f7768e;
 }
-.text-green {
-    color: #50fa7b;
+.text-green{
+    color: #9ece6a;
 }
-.text-yellow {
-    color: #f1fa8c;
+.text-yellow{
+    color: #e0af68;
 }
-.text-blue {
-    color: #bd93f9;
+.text-blue{
+    color: #7aa2f7;
 }
-.text-magenta {
-    color: #ff79c6;
+.text-magenta{
+    color: #bb9af7;
 }
-.text-cyan {
-    color: #8be9fd;
+.text-cyan{
+    color: #7dcfff;
 }
-.text-white {
-    color: #f8f8f2;
+.text-white{
+    color: #a9b1d6;
 }
-.text-dark-grey {
-    color: #6272a4;
+.text-dark-grey{
+    color: #565f89;
 }
-.text-bright-red {
-    color: #ff6e6e;
+.text-bright-red{
+    color: #ff9e3b;
 }
-.text-bright-green {
-    color: #69ff94;
+.text-bright-green{
+    color: #73daca;
 }
-.text-bright-yellow {
-    color: #ffffa5;
+.text-bright-yellow{
+    color: #ffcc66;
 }
-.text-bright-blue {
-    color: #d6b4fc;
+.text-bright-blue{
+    color: #89ddff;
 }
-.text-bright-magenta {
-    color: #ff92df;
+.text-bright-magenta{
+    color: #ff007f;
 }
-.text-bright-cyan {
-    color: #a4ffff;
+.text-bright-cyan{
+    color: #b4f9f8;
 }
-.text-bright-white {
-    color: #ffffff;
+.text-bright-white{
+    color: #c0caf5;
 }
-.cursor {
+.cursor{
   margin-left: 4px;
   animation: blink 1s step-start infinite;
 }
-@keyframes blink {
-  50% {
+@keyframes blink{
+  50%{
     opacity: 0;
   }
 }
@@ -116,19 +119,19 @@ body {
     height: 100%; 
     box-sizing: border-box;
 }
-.stats {
+.stats{
     display: flex; 
     flex-direction: column; 
     height: auto; 
     padding: 10px; 
     box-sizing: border-box;
 }
-.stats .stat {
+.stats .stat{
     display: flex;
     flex-direction: row;
     width: 100%;
 }
-.stats .value {
+.stats .value{
     display: flex; 
     flex-direction: row; 
     height: 100%; 
@@ -136,26 +139,27 @@ body {
     padding: 10px; 
     box-sizing: border-box;
 }
-.stats .label {
+.stats .label{
     display: flex; 
     flex-direction: row; 
     height: 100%;
-    width: 15%; 
+    width: 30%; 
     padding: 10px; 
     box-sizing: border-box;
 }
-.stats .colon {
+.stats .colon{
     display: flex; 
     flex-direction: row; 
     height: 100%;
-    width: 5%; 
+    width: 5%;
     padding: 10px; 
     box-sizing: border-box;
 }
-.links{
+.stats .label-link{
     display: flex; 
-    flex-direction: column; 
-    height: auto;
+    flex-direction: row; 
+    height: 100%;
+    width: 30%; 
     padding: 10px; 
     box-sizing: border-box;
 }
