@@ -89,7 +89,8 @@ body {
 
     object-fit: contain;
 
-    image-rendering: auto;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 .name {
@@ -129,6 +130,12 @@ body {
     font-size: 17px;
 }
 
+.stat .value {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .label {
     color: var(--grey);
     text-transform: uppercase;
@@ -161,6 +168,27 @@ body {
     flex: 1;
 
     background: var(--pink);
+}
+
+.stats > .text-cyan {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 17px;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--cyan);
+}
+
+.stats > .text-cyan::after {
+    content: "";
+
+    height: 1px;
+    flex: 1;
+
+    background: var(--cyan);
 }
 
 .label-link {
@@ -382,6 +410,10 @@ body {
     }
 
     .stats > .text-pink {
+        font-size: 17px;
+    }
+
+    .stats > .text-cyan {
         font-size: 17px;
     }
 }
