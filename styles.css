@@ -1,178 +1,387 @@
-@import url('https://googleapis.com');
-body{
-  font-family: 'JetBrains Mono', monospace;
-  color: #c0caf5;
-  font-size: 16px;
-  background-color: #0c0813;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #030506;
+    --yellow: #ffe600;
+    --pink: #ff19c8;
+    --cyan: #00d9ff;
+    --blue: #a8c7ff;
+    --white: #e6e6e6;
+    --grey: #858b9a;
+    --border: #6677a5;
 }
-a{
-    color:#565f89;
-}
+
 * {
-  box-sizing: border-box;
-}
-.text-black{
-    color: #16161e;
-}
-.text-red{
-    color: #f7768e;
-}
-.text-green{
-    color: #9ece6a;
-}
-.text-yellow{
-    color: #e0af68;
-}
-.text-blue{
-    color: #7aa2f7;
-}
-.text-magenta{
-    color: #bb9af7;
-}
-.text-cyan{
-    color: #7dcfff;
-}
-.text-white{
-    color: #a9b1d6;
-}
-.text-dark-grey{
-    color: #565f89;
-}
-.text-bright-red{
-    color: #ff9e3b;
-}
-.text-bright-green{
-    color: #73daca;
-}
-.text-bright-yellow{
-    color: #ffcc66;
-}
-.text-bright-blue{
-    color: #89ddff;
-}
-.text-bright-magenta{
-    color: #ff007f;
-}
-.text-bright-cyan{
-    color: #b4f9f8;
-}
-.text-bright-white{
-    color: #c0caf5;
-}
-.cursor{
-  margin-left: 4px;
-  animation: blink 1s step-start infinite;
-}
-@keyframes blink{
-  50%{
-    opacity: 0;
-  }
-}
-.container{
-    display: flex; 
-    flex-direction: column; 
-    width: 100vw; 
-    height: 100vh; 
     box-sizing: border-box;
 }
-.name{
-    font-weight: bold;
-    font-size: 2.5rem;
-    display: flex; 
-    flex-direction: column; 
-    height: auto; 
-    padding: 10px; 
-    box-sizing: border-box;
+
+html {
+    scroll-behavior: smooth;
 }
-.pronouns{
-    font-size: 1.25rem;
-    display: flex; 
-    flex-direction: column; 
-    height: auto; 
-    padding: 10px;
-    box-sizing: border-box;
-    border-bottom: 1px solid #AAAAAA;
-    font-weight: normal;
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--white);
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    font-size: 16px;
+    line-height: 1.55;
 }
-.nav{
-    border-bottom: 1px solid #555555;
-    padding: 10px; 
-    width: 100%; 
-    height: 5%; 
-    box-sizing: border-box;
+
+.container {
+    min-height: 100vh;
+    padding: 0 24px;
 }
-.wrapper{
-    display: flex; 
-    width: 100%; 
-    height: 95%; 
-    box-sizing: border-box;
-}
-.logo{
-    padding: 10px; 
-    width: 40%; 
-    height: 100%; 
-    box-sizing: border-box;
-}
-.content{
-    padding: 10px; 
-    width: 60%; 
-    height: 100%; 
-    box-sizing: border-box;
-}
-.stats{
-    display: flex; 
-    flex-direction: column; 
-    height: auto; 
-    padding: 10px; 
-    box-sizing: border-box;
-}
-.stats .stat{
+
+.nav {
+    height: 62px;
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
 }
-.stats .value{
-    display: flex; 
-    flex-direction: row; 
-    height: 100%; 
-    width: 80%;
-    padding: 10px; 
-    box-sizing: border-box;
+
+.nav-container {
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 600;
 }
-.stats .label{
-    display: flex; 
-    flex-direction: row; 
-    height: 100%;
-    width: 30%; 
-    padding: 10px; 
-    box-sizing: border-box;
+
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
-.stats .colon{
-    display: flex; 
-    flex-direction: row; 
-    height: 100%;
-    width: 5%;
-    padding: 10px; 
-    box-sizing: border-box;
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.15s ease;
 }
-.stats .label-link{
-    display: flex; 
-    flex-direction: row; 
-    height: 100%;
-    width: 30%; 
-    padding: 10px; 
-    box-sizing: border-box;
+
+.nav-links a:hover {
+    color: var(--pink);
 }
-.about{
-    display: flex; 
-    flex-direction: column; 
-    height: auto; 
-    padding: 10px; 
-    box-sizing: border-box;
+
+.wrapper {
+    max-width: 1450px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(360px, 0.9fr) minmax(500px, 1.1fr);
+    gap: 70px;
+
+    padding: 55px 30px 70px;
 }
-.footer{
-    padding: 10px; 
-    width: 100%; 
-    height: 5%; 
-    box-sizing: border-box;
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 25px;
+}
+
+.pfp {
+    width: min(100%, 560px);
+    max-height: 720px;
+
+    object-fit: contain;
+
+    image-rendering: auto;
+}
+
+.name {
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 700;
+    line-height: 1;
+
+    margin-bottom: 22px;
+
+    color: var(--yellow);
+}
+
+.pronouns {
+    display: inline-block;
+
+    margin-left: 18px;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    color: var(--blue);
+}
+
+.stats {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    margin-top: 18px;
+    margin-bottom: 32px;
+}
+
+.stat {
+    display: grid;
+    grid-template-columns: 155px 30px 1fr;
+
+    margin-bottom: 12px;
+
+    font-size: 17px;
+}
+
+.label {
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+.colon {
+    color: var(--white);
+}
+
+.value {
+    color: var(--blue);
+}
+
+.stats > .text-pink {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 17px;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--pink);
+}
+
+.stats > .text-pink::after {
+    content: "";
+
+    height: 1px;
+    flex: 1;
+
+    background: var(--pink);
+}
+
+.label-link {
+    overflow-wrap: anywhere;
+}
+
+.label-link a {
+    color: #b36cff;
+    text-decoration: none;
+
+    transition: color 0.15s ease;
+}
+
+.links .stat {
+    grid-template-columns: 280px 30px 1fr;
+}
+
+.links {
+    border-top: none;
+}
+
+.label-link a:hover {
+    color: var(--pink);
+}
+
+.about {
+    margin-top: 30px;
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.about-title::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--cyan);
+}
+
+.about-content {
+    margin-top: 14px;
+
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+
+    white-space: pre-line;
+}
+
+.footer {
+    max-width: 1450px;
+    margin: 0 auto;
+
+    padding: 15px 30px 30px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cursor {
+    color: var(--white);
+    margin-left: 7px;
+
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.text-yellow {
+    color: var(--yellow);
+}
+
+.text-pink {
+    color: var(--pink);
+}
+
+.text-cyan {
+    color: var(--cyan);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-grey {
+    color: var(--grey);
+}
+
+::selection {
+    background: var(--pink);
+    color: #000;
+}
+
+/*mobile layout*/
+
+@media (max-width: 900px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .nav {
+        height: auto;
+        min-height: 62px;
+
+        padding: 14px 0;
+
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 12px;
+
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-container {
+        font-size: 15px;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 35px 10px 50px;
+    }
+
+    .logo {
+        padding-top: 0;
+    }
+
+    .pfp {
+        width: min(80vw, 430px);
+        max-height: 430px;
+    }
+
+    .name {
+        font-size: 45px;
+    }
+
+    .pronouns {
+        display: block;
+        margin: 12px 0 0;
+
+        font-size: 15px;
+    }
+
+    .stat {
+        grid-template-columns: 105px 20px 1fr;
+
+        font-size: 14px;
+    }
+
+    .about {
+        font-size: 18px;
+    }
+
+    .about > div {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 15px 10px 30px;
+        font-size: 15px;
+    }
+}
+
+/*small mobile layout*/
+
+@media (max-width: 520px) {
+    .nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+    }
+
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .pfp {
+        width: 90vw;
+    }
+
+    .name {
+        font-size: 38px;
+    }
+
+    .stat {
+        grid-template-columns: 90px 15px 1fr;
+
+        font-size: 13px;
+    }
+
+    .stats > .text-pink {
+        font-size: 17px;
+    }
 }
